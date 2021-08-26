@@ -1,0 +1,30 @@
+﻿@model Jogo.Models.Funcionario
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultados do Cadastro</h2>
+<fieldset>
+    <legend>Informações do funcionário</legend>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.FuncCod)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.FuncCod)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.FuncNome)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.FuncNome)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.CPFFunc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.CPFFunc)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.RGFunc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.RGFunc)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.FuncDtNasc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.FuncDtNasc)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.EmailFunc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.EmailFunc)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.CelFunc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.CelFunc)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.Cargo)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.Cargo)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.EnderecoFunc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.EnderecoFunc)</div>
+    <br />
+    @Html.ActionLink("Voltar", "Index", "Home")
+</fieldset>
+

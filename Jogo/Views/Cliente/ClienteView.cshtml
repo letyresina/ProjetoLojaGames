@@ -1,0 +1,59 @@
+﻿@model Jogo.Models.Cliente
+@{
+    ViewBag.Title = "ClienteView";
+}
+
+<h2>Cadastrar Clientes</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fildset>
+    <legend>Informações sobre o cliente</legend>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.CliNome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CliNome)
+        @Html.ValidationMessageFor(m => m.CliNome)
+    </div>
+    <div class="editor-label">
+            @Html.LabelFor(m => m.CliCPF)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliCPF)
+            @Html.ValidationMessageFor(m => m.CliCPF)
+        </div>
+    <div class="editor-label">
+            @Html.LabelFor(m => m.CliDtNasc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliDtNasc)
+            @Html.ValidationMessageFor(m => m.CliDtNasc)
+        </div>
+    <div class="editor-label">
+            @Html.LabelFor(m => m.EmailCli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.EmailCli)
+            @Html.ValidationMessageFor(m => m.EmailCli)
+        </div>
+    <div class="editor-label">
+            @Html.LabelFor(m => m.CelCli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CelCli)
+            @Html.ValidationMessageFor(m => m.CelCli)
+        </div>
+    <div class="editor-label">
+            @Html.LabelFor(m => m.EnderecoCli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.EnderecoCli)
+            @Html.ValidationMessageFor(m => m.EnderecoCli)
+        </div>
+      <div>
+            <br /><input type="submit" value="Cadastrar" />
+        </div>
+</fildset>
+}
+

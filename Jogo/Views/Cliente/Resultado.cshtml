@@ -1,0 +1,24 @@
+﻿@model Jogo.Models.Cliente
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultados do Cadastro</h2>
+<fieldset>
+    <legend>Informações do cliente</legend>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.CliNome)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.CliNome)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.CliCPF)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.CliCPF)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.CliDtNasc)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.CliDtNasc)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.EmailCli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.EmailCli)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.CelCli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.CelCli)</div>
+    <div class="editor-label">@Html.DisplayNameFor(m => m.EnderecoCli)</div>
+    <div class="editor-field">@Html.DisplayFor(m => m.EnderecoCli)</div>
+    <br />
+    @Html.ActionLink("Voltar", "Index", "Home")
+</fieldset>
+

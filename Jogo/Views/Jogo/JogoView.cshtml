@@ -1,0 +1,80 @@
+﻿@model Jogo.Models.JogoClasse
+@{
+    ViewBag.Title = "Jogo View";
+}
+
+<h2>Cadastrar Jogos</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fildset>
+        <legend>Informações sobre o jogo</legend>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoCod)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoCod)
+            @Html.ValidationMessageFor(m => m.JogoCod)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoNome)
+            @Html.ValidationMessageFor(m => m.JogoNome)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Versao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Versao)
+            @Html.ValidationMessageFor(m => m.Versao)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoDesenvolvedor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoDesenvolvedor)
+            @Html.ValidationMessageFor(m => m.JogoDesenvolvedor)
+        </div>
+         <div class="editor-label">
+            @Html.LabelFor(m => m.GeneroJogo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.GeneroJogo)
+            @Html.ValidationMessageFor(m => m.GeneroJogo)
+        </div>
+          <div class="editor-label">
+            @Html.LabelFor(m => m.FaixaEtaria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.FaixaEtaria)
+            @Html.ValidationMessageFor(m => m.FaixaEtaria)
+        </div>
+          <div class="editor-label">
+            @Html.LabelFor(m => m.Plataforma)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Plataforma)
+            @Html.ValidationMessageFor(m => m.Plataforma)
+        </div>
+          <div class="editor-label">
+            @Html.LabelFor(m => m.AnoLanc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.AnoLanc)
+            @Html.ValidationMessageFor(m => m.AnoLanc)
+        </div>
+         <div class="editor-label">
+            @Html.LabelFor(m => m.Sinopse)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Sinopse)
+            @Html.ValidationMessageFor(m => m.Sinopse)
+        </div>
+        <div>
+            <br /><input type="submit" value="Cadastrar" />
+        </div>
+    </fildset>
+}
+

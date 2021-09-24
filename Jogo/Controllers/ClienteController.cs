@@ -15,15 +15,14 @@ namespace Jogo.Controllers
             var cliente = new Cliente();
             return View(cliente);
         }
+        Acoes ac = new Acoes();
+
         [HttpPost]
 
         public ActionResult ClienteView(Cliente cliente)
         {
-            if (ModelState.IsValid)
-            {
+                ac.CadastrarCliente(cliente);
                 return View("Resultado", cliente);
-            }
-            return View(cliente);
         }
     }
 }

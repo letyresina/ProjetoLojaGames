@@ -15,15 +15,15 @@ namespace Jogo.Controllers
             var funcionario = new Funcionario();
             return View(funcionario);
         }
+        Acoes ac = new Acoes();
+
         [HttpPost]
 
         public ActionResult FuncView(Funcionario funcionario)
         {
-            if (ModelState.IsValid)
-            {
-                return View("Resultado", funcionario);
-            }
-            return View(funcionario);
+            ac.CadastrarFuncionario(funcionario);
+            return View("Resultado", funcionario);
+
         }
     }
 }

@@ -15,15 +15,14 @@ namespace Jogo.Controllers
             var jogo = new JogoClasse();
             return View(jogo);
         }
+        Acoes ac = new Acoes();
+
         [HttpPost]
 
         public ActionResult JogoView(JogoClasse jogo)
         {
-            if (ModelState.IsValid)
-            {
-                return View("Resultado", jogo);
-            }
-            return View(jogo);
+            ac.CadastrarJogo(jogo);
+            return View("Resultado", jogo);
         }
     }
 }

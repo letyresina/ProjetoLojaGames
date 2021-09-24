@@ -34,7 +34,10 @@ create table tbJogo(
     Sinopse varchar(100) not null
 );
 
-create user "gamer"@"localhost" identified with mysql_native_password by "123456";
-grant all privileges on dvVioletGames.* to "gamer"@"localhost" with grant option;
+select * from tbCliente;
 
+ALTER TABLE tbFuncionario
+CHANGE Endereco EnderecoFunc varchar(80);
 
+select * from tbFuncionario;
+select * from tbJogo;
